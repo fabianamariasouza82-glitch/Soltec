@@ -17,8 +17,8 @@ const faqs = [
     a: "Sim. Atendemos edifícios comerciais, escritórios, lojas, centros de distribuição e redes de varejo em Campinas e região.",
   },
   {
-    q: "Emitem nota fiscal e ART para pessoa jurídica?",
-    a: "Sim, emitimos nota fiscal e ART em todos os serviços, com CNPJ ativo e documentação completa para sua contabilidade.",
+    q: "Emitem nota fiscal e TRT para pessoa jurídica?",
+    a: "Sim, emitimos nota fiscal e TRT em todos os serviços, com CNPJ ativo e documentação completa para sua contabilidade.",
   },
   {
     q: "Fazem contrato de manutenção preventiva recorrente?",
@@ -99,7 +99,7 @@ export default function ManutencaoEletricaComercial() {
                   "Adequação de instalações para novos equipamentos",
                   "Contratos de manutenção recorrente com relatórios periódicos",
                   "Atendimento noturno, fins de semana e feriados",
-                  "Nota fiscal e ART para pessoa jurídica",
+                  "Nota fiscal e TRT para pessoa jurídica",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
                     <CheckCircle size={20} className="text-[#ff6600] mt-1 flex-shrink-0" />
@@ -118,7 +118,7 @@ export default function ManutencaoEletricaComercial() {
                 suas operações comerciais funcionando com segurança na Região Metropolitana de Campinas.
               </p>
               <div className="flex items-center gap-2 text-[#003366] font-semibold">
-                <Store size={18} /> Nota fiscal e ART em todos os serviços
+                <Store size={18} /> Nota fiscal e TRT em todos os serviços
               </div>
             </div>
           </div>
