@@ -106,3 +106,4 @@ client/src/
 - Criar/otimizar o Google Business Profile com as cidades atendidas
 - Ver `Plano_SEO_B2B_Soltec_Campinas.md` (documento à parte) para o
   plano estratégico completo
+  
