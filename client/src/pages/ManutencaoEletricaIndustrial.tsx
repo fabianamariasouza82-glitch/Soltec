@@ -13,8 +13,8 @@ const faqs = [
     a: "O recomendado é manutenção preventiva a cada 6 meses para indústrias com operação contínua ou alto consumo, e ao menos 1 vez ao ano para operações padrão. Equipamentos críticos (subestações, painéis de comando) costumam exigir inspeção trimestral.",
   },
   {
-    q: "Vocês emitem laudo técnico e ART?",
-    a: "Sim. Todos os serviços de manutenção e instalação elétrica industrial são acompanhados de laudo técnico e ART (Anotação de Responsabilidade Técnica), documentos exigidos por seguradoras e fiscalização.",
+    q: "Vocês emitem laudo técnico e TRT?",
+    a: "Sim. Todos os serviços de manutenção e instalação elétrica industrial são acompanhados de laudo técnico e TRT, documentos exigidos por seguradoras e fiscalização.",
   },
   {
     q: "A Soltec atende emergências fora do horário comercial?",
@@ -64,7 +64,7 @@ export default function ManutencaoEletricaIndustrial() {
             </h1>
             <p className="text-lg text-white/90 max-w-2xl mb-8">
               Manutenção preventiva e corretiva para indústrias que não podem parar. Equipe certificada NR-10 e NR-12,
-              laudos técnicos com ART, e atendimento emergencial em Campinas, Sumaré, Paulínia, Valinhos, Vinhedo,
+              laudos técnicos com TRT, e atendimento emergencial em Campinas, Sumaré, Paulínia, Valinhos, Vinhedo,
               Americana, Nova Odessa, Santa Bárbara D'Oeste, Monte Mor, Limeira, Jaguariúna e Indaiatuba.
             </p>
             <div className="flex flex-wrap gap-4">
@@ -117,11 +117,11 @@ export default function ManutencaoEletricaIndustrial() {
               </h3>
               <p className="text-gray-600 mb-4">
                 Empresas como IBM, Coca-Cola, Audi, Tramontina, Medley, VLI e Cacau Show já confiaram na Soltec para
-                seus projetos elétricos. Mais de 15 anos de experiência atendendo operações industriais na Região
+                seus projetos elétricos. Mais de 20 anos de experiência atendendo operações industriais na Região
                 Metropolitana de Campinas.
               </p>
               <div className="flex items-center gap-2 text-[#003366] font-semibold">
-                <Zap size={18} /> Laudo técnico e ART em todos os serviços
+                <Zap size={18} /> Laudo técnico e TRT em todos os serviços
               </div>
             </div>
           </div>
