@@ -80,7 +80,7 @@ export default function HomePage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
-                { title: 'Experiência', desc: 'Mais de 15 anos no mercado' },
+                { title: 'Experiência', desc: 'Mais de 20 anos no mercado' },
                 { title: 'Segurança', desc: 'Conformidade com todas as normas' },
                 { title: 'Qualidade', desc: 'Materiais e serviços premium' },
                 { title: 'Suporte 24/7', desc: 'Atendimento emergencial' },
