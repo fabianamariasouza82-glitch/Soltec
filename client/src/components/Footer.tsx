@@ -6,11 +6,8 @@ export default function Footer() {
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-[#ff6600] rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold">⚡</span>
-              </div>
-              <span className="font-bold text-lg">SOLTEC</span>
+            <div className="mb-4">
+              <img src="/images/soltec-logo-white.png" alt="Soltec Instalações Elétricas" className="h-10 w-auto" />
             </div>
             <p className="text-blue-100 text-sm">
               Soluções elétricas profissionais para empresas em Campinas e região.
