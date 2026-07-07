@@ -14,7 +14,7 @@ const faqs = [
   },
   {
     q: "O laudo elétrico é obrigatório para condomínios?",
-    a: "Sim, laudos de instalações elétricas prediais costumam ser exigidos por seguradoras, pelo Corpo de Bombeiros (AVCB) e em processos de renovação de apólice. A Soltec emite laudo técnico com ART.",
+    a: "Sim, laudos de instalações elétricas prediais costumam ser exigidos por seguradoras, pelo Corpo de Bombeiros (AVCB) e em processos de renovação de apólice. A Soltec emite laudo técnico com TRT.",
   },
   {
     q: "Fazem manutenção preventiva programada para síndicos?",
@@ -48,7 +48,7 @@ export default function InstalacaoEletricaPredial() {
     <div className="min-h-screen flex flex-col bg-white">
       <PageMeta
         title="Instalação e Manutenção Elétrica Predial em Campinas | Soltec"
-        description="Instalação e manutenção elétrica predial para condomínios, prédios comerciais e residenciais em Campinas e região. Laudo técnico com ART. Solicite orçamento."
+        description="Instalação e manutenção elétrica predial para condomínios, prédios comerciais e residenciais em Campinas e região. Laudo técnico com TRT. Solicite orçamento."
         path="/instalacao-eletrica-predial-campinas"
       />
       <Header />
@@ -64,7 +64,7 @@ export default function InstalacaoEletricaPredial() {
             <p className="text-lg text-white/90 max-w-2xl mb-8">
               Soluções elétricas para condomínios, prédios residenciais e comerciais em Campinas, Sumaré, Paulínia,
               Valinhos, Vinhedo, Americana, Nova Odessa, Santa Bárbara D'Oeste, Monte Mor, Limeira, Jaguariúna e
-              Indaiatuba. Laudos técnicos com ART para síndicos e administradoras.
+              Indaiatuba. Laudos técnicos com TRT para síndicos e administradoras.
             </p>
             <div className="flex flex-wrap gap-4">
               <a href="https://wa.me/5519994252525" target="_blank" rel="noopener noreferrer">
@@ -94,7 +94,7 @@ export default function InstalacaoEletricaPredial() {
               </p>
               <ul className="space-y-3">
                 {[
-                  "Laudo técnico de instalações elétricas com ART",
+                  "Laudo técnico de instalações elétricas com TRT",
                   "Manutenção preventiva programada para condomínios",
                   "Modernização de quadros elétricos antigos",
                   "Adequação à NBR-5410 e exigências de AVCB",
@@ -114,11 +114,11 @@ export default function InstalacaoEletricaPredial() {
                 Feito para síndicos e administradoras
               </h3>
               <p className="text-gray-600 mb-4">
-                Mais de 15 anos atendendo prédios e condomínios na Região Metropolitana de Campinas, com equipe
+                Mais de 20 anos atendendo prédios e condomínios na Região Metropolitana de Campinas, com equipe
                 certificada e atendimento programado que respeita a rotina do prédio.
               </p>
               <div className="flex items-center gap-2 text-[#003366] font-semibold">
-                <Building2 size={18} /> Laudo técnico e ART em todos os serviços
+                <Building2 size={18} /> Laudo técnico e TRT em todos os serviços
               </div>
             </div>
           </div>
