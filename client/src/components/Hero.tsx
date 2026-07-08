@@ -18,7 +18,7 @@ function SlideImages({ current, className }: { current: number; className?: stri
             idx === current ? "opacity-100" : "opacity-0"
           }`}
         >
-          <img src={src} alt="" className="w-full h-full object-cover" />
+          <img src={src} alt="" className="w-full h-full object-cover object-top" />
         </div>
       ))}
     </div>
