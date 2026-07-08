@@ -27,9 +27,11 @@ export default function Header() {
           </a>
         </nav>
 
-        <Button className="hidden md:inline-flex bg-[#ff6600] hover:bg-[#e55a00] text-white font-semibold">
-          Solicitar Orçamento
-        </Button>
+        <a href="https://wa.me/5519994252525" target="_blank" rel="noopener noreferrer" className="hidden md:inline-flex">
+          <Button className="bg-[#ff6600] hover:bg-[#e55a00] text-white font-semibold">
+            Solicitar Orçamento
+          </Button>
+        </a>
 
         <button
           className="md:hidden p-2"
@@ -47,9 +49,11 @@ export default function Header() {
             <a href="/#clientes" className="text-left text-gray-700 hover:text-[#003366] font-medium">Clientes</a>
             <a href="/#sobre" className="text-left text-gray-700 hover:text-[#003366] font-medium">Sobre</a>
             <a href="/#contato" className="text-left text-gray-700 hover:text-[#003366] font-medium">Contato</a>
-            <Button className="w-full bg-[#ff6600] hover:bg-[#e55a00] text-white font-semibold">
-              Solicitar Orçamento
-            </Button>
+            <a href="https://wa.me/5519994252525" target="_blank" rel="noopener noreferrer">
+              <Button className="w-full bg-[#ff6600] hover:bg-[#e55a00] text-white font-semibold">
+                Solicitar Orçamento
+              </Button>
+            </a>
           </nav>
         </div>
       )}
