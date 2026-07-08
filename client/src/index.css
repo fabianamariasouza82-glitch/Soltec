@@ -243,12 +243,16 @@
 
 /* Correção real: o widget do Trustindex usa as classes "ti-widget" e
    "ti-widget-container" (confirmado via DevTools), não "trustindex".
-   O próprio Trustindex injeta CSS com seletores de atributo
-   (ex: .ti-widget[data-layout-id='36'][data-set-id='light-background']),
-   que têm MAIS especificidade que um simples ".ti-widget". Por isso
-   usamos seletores de atributo aqui também, para garantir que nossa
-   regra vença mesmo com !important dos dois lados. */
-div.ti-widget[data-layout-id] {
+   O próprio Trustindex injeta CSS com seletores de atributo, ex:
+   .ti-widget[data-layout-id='36'][data-set-id='light-background']
+   Esse seletor tem 3 partes (1 classe + 2 atributos), então tem MAIS
+   especificidade que um seletor nosso com só 2 partes — por isso a
+   correção anterior não funcionou.
+   Aqui usamos "#root" como âncora: um seletor de ID tem especificidade
+   muito maior que qualquer combinação de classes/atributos, então
+   garante que nossa regra sempre vença, independente do que o
+   Trustindex injete. */
+#root div.ti-widget[data-layout-id] {
   margin-left: auto !important;
   margin-right: auto !important;
   width: 100% !important;
@@ -256,7 +260,7 @@ div.ti-widget[data-layout-id] {
   justify-content: center !important;
 }
 
-div.ti-widget-container[class*="ti-col"] {
+#root div.ti-widget-container[class*="ti-col"] {
   display: flex !important;
   flex-wrap: wrap !important;
   justify-content: center !important;
