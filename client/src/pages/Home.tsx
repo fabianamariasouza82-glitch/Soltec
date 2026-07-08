@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import ServiceCard from "@/components/ServiceCard";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
+import GoogleReviews from "@/components/GoogleReviews";
 import { Zap, Building2, Home, Users, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
@@ -133,6 +134,9 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+
+        {/* Google Reviews Section */}
+        <GoogleReviews />
 
         {/* About Section */}
         <section id="sobre" className="py-16 md:py-24 bg-gray-50">
