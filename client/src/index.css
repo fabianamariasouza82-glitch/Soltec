@@ -53,27 +53,27 @@
   --chart-4: var(--color-blue-700);
   --chart-5: var(--color-blue-800);
   --radius: 0.65rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.235 0.015 65);
+  --background: oklch(0.98 0.001 286.375);
+  --foreground: oklch(0.12 0.01 286);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.235 0.015 65);
+  --card-foreground: oklch(0.12 0.01 286);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.235 0.015 65);
-  --secondary: oklch(0.98 0.001 286.375);
-  --secondary-foreground: oklch(0.4 0.015 65);
-  --muted: oklch(0.967 0.001 286.375);
-  --muted-foreground: oklch(0.552 0.016 285.938);
-  --accent: oklch(0.967 0.001 286.375);
-  --accent-foreground: oklch(0.141 0.005 285.823);
+  --popover-foreground: oklch(0.12 0.01 286);
+  --secondary: oklch(0.95 0.002 286);
+  --secondary-foreground: oklch(0.15 0.01 286);
+  --muted: oklch(0.92 0.002 286);
+  --muted-foreground: oklch(0.45 0.01 286);
+  --accent: oklch(0.85 0.18 60);
+  --accent-foreground: oklch(1 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.985 0 0);
   --border: oklch(0.92 0.004 286.32);
   --input: oklch(0.92 0.004 286.32);
   --ring: oklch(0.623 0.214 259.815);
   --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.235 0.015 65);
-  --sidebar-accent: oklch(0.967 0.001 286.375);
-  --sidebar-accent-foreground: oklch(0.141 0.005 285.823);
+  --sidebar-foreground: oklch(0.12 0.01 286);
+  --sidebar-accent: oklch(0.85 0.18 60);
+  --sidebar-accent-foreground: oklch(1 0 0);
   --sidebar-border: oklch(0.92 0.004 286.32);
   --sidebar-ring: oklch(0.623 0.214 259.815);
 }
@@ -119,6 +119,20 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  /* Mantém seleção liberada em campos de formulário, se existirem */
+  input, textarea {
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    user-select: text;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
@@ -149,6 +163,7 @@
    */
   .container {
     width: 100%;
+    max-width: none !important; /* sobrepõe o container padrão do Tailwind v4 */
     margin-left: auto;
     margin-right: auto;
     padding-left: 1rem; /* 16px - mobile padding */
@@ -169,9 +184,59 @@
 
   @media (min-width: 1024px) {
     .container {
-      padding-left: 2rem; /* 32px - desktop padding */
-      padding-right: 2rem;
-      max-width: 1280px; /* Standard content width */
+      padding-left: 3rem; /* respiro nas laterais, sem "faixa vazia" fixa */
+      padding-right: 3rem;
+      /* Sem max-width: o conteúdo acompanha a largura real da tela */
     }
   }
+
+  /* Tamanho base da fonte maior em todos os tamanhos de tela.
+     Como a maioria dos textos do Tailwind usa rem, tudo cresce junto
+     (títulos, parágrafos, botões, ícones, espaçamentos). */
+  html {
+    font-size: 17px; /* padrão do navegador é 16px */
+  }
+
+  @media (min-width: 768px) {
+    html {
+      font-size: 18px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    html {
+      font-size: 18px; /* ajustado de 19px para um crescimento mais suave */
+    }
+  }
+
+  @media (min-width: 1600px) {
+    html {
+      font-size: 19px; /* ajustado de 21px para não ficar desproporcional */
+    }
+  }
+
+  /* Proteção: garante que a página sempre ocupe a largura total da tela,
+     mesmo se algum script de terceiros (como o widget de avaliações)
+     tentar aplicar um limite de largura ou centralização por conta própria. */
+  html, body, #root {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+  }
+}
+
+/* Centraliza o widget de avaliações do Trustindex,
+   independente da estrutura interna que o script injeta */
+[class*="trustindex"],
+[id*="trustindex"] {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center !important;
+}
+
+[class*="trustindex"] iframe,
+[id*="trustindex"] iframe {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  display: block !important;
 }
