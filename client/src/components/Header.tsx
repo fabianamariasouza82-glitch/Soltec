@@ -48,12 +48,12 @@ export default function Header() {
       {mobileMenuOpen && (
         <div className="md:hidden bg-white border-b border-gray-200">
           <nav className="flex flex-col gap-4 p-4">
-            <a href="/" className="text-left text-gray-700 hover:text-[#003366] font-medium">Home</a>
-            <a href="/#servicos" className="text-left text-gray-700 hover:text-[#003366] font-medium">Serviços</a>
-            <a href="/#clientes" className="text-left text-gray-700 hover:text-[#003366] font-medium">Clientes</a>
-            <a href="/#sobre" className="text-left text-gray-700 hover:text-[#003366] font-medium">Sobre</a>
-            <a href="/#contato" className="text-left text-gray-700 hover:text-[#003366] font-medium">Contato</a>
-            <a href="https://wa.me/5519994252525" target="_blank" rel="noopener noreferrer">
+            <a href="/" onClick={() => setMobileMenuOpen(false)} className="text-left text-gray-700 hover:text-[#003366] font-medium">Home</a>
+            <a href="/#servicos" onClick={() => setMobileMenuOpen(false)} className="text-left text-gray-700 hover:text-[#003366] font-medium">Serviços</a>
+            <a href="/#clientes" onClick={() => setMobileMenuOpen(false)} className="text-left text-gray-700 hover:text-[#003366] font-medium">Clientes</a>
+            <a href="/#sobre" onClick={() => setMobileMenuOpen(false)} className="text-left text-gray-700 hover:text-[#003366] font-medium">Sobre</a>
+            <a href="/#contato" onClick={() => setMobileMenuOpen(false)} className="text-left text-gray-700 hover:text-[#003366] font-medium">Contato</a>
+            <a href="https://wa.me/5519994252525" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)}>
               <Button className="w-full bg-[#ff6600] hover:bg-[#e55a00] text-white font-semibold">
                 Solicitar Orçamento
               </Button>
