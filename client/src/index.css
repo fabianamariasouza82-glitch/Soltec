@@ -240,3 +240,23 @@
   margin-right: auto !important;
   display: block !important;
 }
+
+/* Correção real: o widget do Trustindex usa as classes "ti-widget" e
+   "ti-widget-container" (confirmado via DevTools), não "trustindex".
+   Aqui centralizamos o container que envolve os cards de avaliação. */
+.ti-widget {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  width: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+}
+
+.ti-widget-container {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  width: auto !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
