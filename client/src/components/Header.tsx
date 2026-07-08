@@ -13,6 +13,9 @@ export default function Header() {
         </a>
 
         <nav className="hidden md:flex items-center gap-8">
+          <a href="/" className="text-gray-700 hover:text-[#003366] transition-colors font-medium">
+            Home
+          </a>
           <a href="/#servicos" className="text-gray-700 hover:text-[#003366] transition-colors font-medium">
             Serviços
           </a>
@@ -45,6 +48,7 @@ export default function Header() {
       {mobileMenuOpen && (
         <div className="md:hidden bg-white border-b border-gray-200">
           <nav className="flex flex-col gap-4 p-4">
+            <a href="/" className="text-left text-gray-700 hover:text-[#003366] font-medium">Home</a>
             <a href="/#servicos" className="text-left text-gray-700 hover:text-[#003366] font-medium">Serviços</a>
             <a href="/#clientes" className="text-left text-gray-700 hover:text-[#003366] font-medium">Clientes</a>
             <a href="/#sobre" className="text-left text-gray-700 hover:text-[#003366] font-medium">Sobre</a>
