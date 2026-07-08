@@ -151,9 +151,11 @@ export default function HomePage() {
                 <p className="text-gray-600 mb-6 leading-relaxed">
                   Nosso compromisso é oferecer soluções elétricas que garantem a continuidade operacional de seus negócios, com atendimento personalizado e suporte técnico de qualidade.
                 </p>
-                <Button className="bg-[#ff6600] hover:bg-[#e55a00] text-white font-semibold px-8 py-3">
-                  Conhecer Mais
-                </Button>
+                <a href="https://wa.me/5519994252525" target="_blank" rel="noopener noreferrer">
+                  <Button className="bg-[#ff6600] hover:bg-[#e55a00] text-white font-semibold px-8 py-3">
+                    Entrar em Contato
+                  </Button>
+                </a>
               </div>
               <div className="relative">
                 <img 
