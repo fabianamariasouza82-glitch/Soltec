@@ -243,8 +243,12 @@
 
 /* Correção real: o widget do Trustindex usa as classes "ti-widget" e
    "ti-widget-container" (confirmado via DevTools), não "trustindex".
-   Aqui centralizamos o container que envolve os cards de avaliação. */
-.ti-widget {
+   O próprio Trustindex injeta CSS com seletores de atributo
+   (ex: .ti-widget[data-layout-id='36'][data-set-id='light-background']),
+   que têm MAIS especificidade que um simples ".ti-widget". Por isso
+   usamos seletores de atributo aqui também, para garantir que nossa
+   regra vença mesmo com !important dos dois lados. */
+div.ti-widget[data-layout-id] {
   margin-left: auto !important;
   margin-right: auto !important;
   width: 100% !important;
@@ -252,7 +256,7 @@
   justify-content: center !important;
 }
 
-.ti-widget-container {
+div.ti-widget-container[class*="ti-col"] {
   display: flex !important;
   flex-wrap: wrap !important;
   justify-content: center !important;
