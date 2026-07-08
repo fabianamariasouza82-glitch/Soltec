@@ -30,7 +30,7 @@ export default function HomePage() {
         <Hero />
 
         {/* Services Section */}
-        <section id="servicos" className="py-16 md:py-24 bg-white">
+        <section id="servicos" className="py-16 md:py-24 bg-white scroll-mt-24 md:scroll-mt-28">
           <div className="container">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-[#003366] mb-4" style={{ fontFamily: 'var(--font-display)' }}>
@@ -101,7 +101,7 @@ export default function HomePage() {
         </section>
 
         {/* Clients Section */}
-        <section id="clientes" className="py-16 md:py-24 bg-white">
+        <section id="clientes" className="py-16 md:py-24 bg-white scroll-mt-24 md:scroll-mt-28">
           <div className="container">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-[#003366] mb-4" style={{ fontFamily: 'var(--font-display)' }}>
@@ -135,11 +135,8 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Google Reviews Section */}
-        <GoogleReviews />
-
         {/* About Section */}
-        <section id="sobre" className="py-16 md:py-24 bg-gray-50">
+        <section id="sobre" className="py-16 md:py-24 bg-gray-50 scroll-mt-24 md:scroll-mt-28">
           <div className="container">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
@@ -174,6 +171,9 @@ export default function HomePage() {
 
         {/* Contact Form Section */}
         <ContactForm />
+
+        {/* Google Reviews Section */}
+        <GoogleReviews />
       </main>
       <Footer />
     </div>
