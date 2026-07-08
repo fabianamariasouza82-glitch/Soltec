@@ -1,5 +1,25 @@
 {
+  "redirects": [
+    { "source": "/servicos", "destination": "/", "permanent": true },
+    { "source": "/servicos/", "destination": "/", "permanent": true },
+    { "source": "/sobre-nos", "destination": "/", "permanent": true },
+    { "source": "/sobre-nos/", "destination": "/", "permanent": true },
+    { "source": "/contatos", "destination": "/", "permanent": true },
+    { "source": "/contatos/", "destination": "/", "permanent": true },
+    { "source": "/area-de-atendimento", "destination": "/", "permanent": true },
+    { "source": "/area-de-atendimento/", "destination": "/", "permanent": true },
+    { "source": "/eletricista", "destination": "/manutencao-eletrica-comercial-campinas", "permanent": true },
+    { "source": "/eletricista/", "destination": "/manutencao-eletrica-comercial-campinas", "permanent": true },
+    { "source": "/engenharia-eletrica", "destination": "/manutencao-eletrica-industrial-campinas", "permanent": true },
+    { "source": "/engenharia-eletrica/", "destination": "/manutencao-eletrica-industrial-campinas", "permanent": true },
+    { "source": "/https-soltecnicas-com-br-servicos-eletricos-para-industrias", "destination": "/manutencao-eletrica-industrial-campinas", "permanent": true },
+    { "source": "/https-soltecnicas-com-br-servicos-eletricos-para-industrias/", "destination": "/manutencao-eletrica-industrial-campinas", "permanent": true },
+    { "source": "/industrial-innovation-and-design-exhibitions-of-2017", "destination": "/", "permanent": true },
+    { "source": "/industrial-innovation-and-design-exhibitions-of-2017/", "destination": "/", "permanent": true }
+  ],
   "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+    { "source": "/manutencao-eletrica-industrial-campinas", "destination": "/index.html" },
+    { "source": "/instalacao-eletrica-predial-campinas", "destination": "/index.html" },
+    { "source": "/manutencao-eletrica-comercial-campinas", "destination": "/index.html" }
   ]
 }
