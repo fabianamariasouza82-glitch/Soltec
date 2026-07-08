@@ -18,12 +18,16 @@ export default function Hero() {
               Instalação e manutenção elétrica profissional para empresas em Campinas e região. Segurança, confiabilidade e excelência em cada projeto.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Button className="bg-[#ff6600] hover:bg-[#e55a00] text-white font-semibold px-8 py-3 text-base">
-                Solicitar Orçamento Agora
-              </Button>
-              <Button variant="outline" className="border-white text-white hover:bg-white hover:text-[#003366] font-semibold px-8 py-3 text-base">
-                Conheça Nossos Serviços
-              </Button>
+              <a href="https://wa.me/5519994252525" target="_blank" rel="noopener noreferrer">
+                <Button className="w-full bg-[#ff6600] hover:bg-[#e55a00] text-white font-semibold px-8 py-3 text-base">
+                  Solicitar Orçamento Agora
+                </Button>
+              </a>
+              <a href="/#servicos">
+                <Button variant="outline" className="w-full border-white text-white hover:bg-white hover:text-[#003366] font-semibold px-8 py-3 text-base">
+                  Conheça Nossos Serviços
+                </Button>
+              </a>
             </div>
           </div>
 
