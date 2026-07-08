@@ -113,14 +113,15 @@ export default function HomePage() {
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
               {[
-                { name: 'IBM', logo: 'https://soltecnicas.com.br/wp-content/uploads/2021/05/IBM-1.png' },
-                { name: 'Coca-Cola', logo: 'https://soltecnicas.com.br/wp-content/uploads/2025/08/Logo-Coca-Cola.png' },
-                { name: 'Audi', logo: 'https://soltecnicas.com.br/wp-content/uploads/2025/08/Logo-Audi.png' },
-                { name: 'Tramontina', logo: 'https://soltecnicas.com.br/wp-content/uploads/2025/08/Logo-Tramontina.png' },
-                { name: 'Medley', logo: 'https://soltecnicas.com.br/wp-content/uploads/2025/08/Logo-Medley.png' },
-                { name: 'VLI', logo: 'https://soltecnicas.com.br/wp-content/uploads/2025/08/Logo-VLI.png' },
-                { name: 'MC Home', logo: 'https://soltecnicas.com.br/wp-content/uploads/2025/08/Logo-MC.png' },
-                { name: 'Cacau Show', logo: 'https://soltecnicas.com.br/wp-content/uploads/2025/08/Logo-Cacau-Show.png' },
+                { name: 'IBM', logo: '/images/clients/ibm.png' },
+                { name: 'Coca-Cola', logo: '/images/clients/coca-cola.png' },
+                { name: 'Audi', logo: '/images/clients/audi.png' },
+                { name: 'Tramontina', logo: '/images/clients/tramontina.png' },
+                { name: 'Medley', logo: '/images/clients/medley.png' },
+                { name: 'VLI', logo: '/images/clients/vli.png' },
+                { name: 'McDonald\'s', logo: '/images/clients/mcdonalds.png' },
+                { name: 'Cacau Show', logo: '/images/clients/cacau-show.png' },
+                { name: 'ENGIE', logo: '/images/clients/engie.png' },
               ].map((client, idx) => (
                 <div key={idx} className="flex items-center justify-center p-6 bg-white border border-gray-100 rounded-lg hover:shadow-lg transition-all">
                   <img src={client.logo} alt={`Logo ${client.name}`} className="max-h-12 md:max-h-14 w-auto object-contain grayscale hover:grayscale-0 transition-all" />
