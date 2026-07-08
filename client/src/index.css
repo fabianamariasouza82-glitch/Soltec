@@ -268,3 +268,13 @@
   margin-left: auto !important;
   margin-right: auto !important;
 }
+
+/* Correção definitiva: o widget é do tipo "slider" (carrossel), então
+   quem realmente controla o alinhamento dos cards é o "trilho" interno
+   .ti-reviews-container-wrapper, não o .ti-widget nem o
+   .ti-widget-container (esses só controlam a largura do bloco todo).
+   Sliders alinham os itens ao início por padrão, mesmo quando todos
+   cabem na tela — por isso forçamos justify-content aqui. */
+#root .ti-reviews-container-wrapper {
+  justify-content: center !important;
+}
