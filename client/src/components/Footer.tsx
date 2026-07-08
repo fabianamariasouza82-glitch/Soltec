@@ -44,7 +44,7 @@ export default function Footer() {
 
         <div className="border-t border-blue-400 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center text-blue-100 text-sm">
-            <p>&copy; {currentYear} Soltécnicas. Todos os direitos reservados.</p>
+            <p>&copy; {currentYear} Soltec. Todos os direitos reservados.</p>
             <div className="flex gap-6 mt-4 md:mt-0">
               <a href="#" className="hover:text-white transition-colors">Política de Privacidade</a>
               <a href="#" className="hover:text-white transition-colors">Termos de Uso</a>
