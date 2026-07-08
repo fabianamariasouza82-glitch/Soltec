@@ -19,7 +19,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative text-white py-24 md:py-40 overflow-hidden">
+    <section className="relative text-white py-16 md:py-40 min-h-[480px] md:min-h-0 flex items-center overflow-hidden">
       {/* Slider images */}
       <div className="absolute inset-0">
         {slides.map((src, idx) => (
