@@ -120,11 +120,10 @@ export default function HomePage() {
                 { name: 'Medley', logo: '/images/clients/medley.png' },
                 { name: 'VLI', logo: '/images/clients/vli.png' },
                 { name: 'McDonald\'s', logo: '/images/clients/mcdonalds.png' },
-                { name: 'Cacau Show', logo: '/images/clients/cacau-show.png' },
                 { name: 'ENGIE', logo: '/images/clients/engie.png' },
               ].map((client, idx) => (
-                <div key={idx} className="flex items-center justify-center p-6 bg-white border border-gray-100 rounded-lg hover:shadow-lg transition-all">
-                  <img src={client.logo} alt={`Logo ${client.name}`} className="max-h-12 md:max-h-14 w-auto object-contain grayscale hover:grayscale-0 transition-all" />
+                <div key={idx} className="flex items-center justify-center p-6 h-28 bg-white border border-gray-100 rounded-lg hover:shadow-lg transition-all">
+                  <img src={client.logo} alt={`Logo ${client.name}`} className="max-h-16 md:max-h-20 max-w-[85%] w-auto object-contain grayscale hover:grayscale-0 transition-all" />
                 </div>
               ))}
             </div>
