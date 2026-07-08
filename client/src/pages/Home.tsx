@@ -115,15 +115,19 @@ export default function HomePage() {
               {[
                 { name: 'IBM', logo: '/images/clients/ibm.png' },
                 { name: 'Coca-Cola', logo: '/images/clients/coca-cola.png' },
-                { name: 'Audi', logo: '/images/clients/audi.png' },
+                { name: 'Audi', logo: '/images/clients/audi.png', big: true },
                 { name: 'Tramontina', logo: '/images/clients/tramontina.png' },
                 { name: 'Medley', logo: '/images/clients/medley.png' },
                 { name: 'VLI', logo: '/images/clients/vli.png' },
-                { name: 'McDonald\'s', logo: '/images/clients/mcdonalds.png' },
+                { name: 'McDonald\'s', logo: '/images/clients/mcdonalds.png', big: true },
                 { name: 'ENGIE', logo: '/images/clients/engie.png' },
               ].map((client, idx) => (
-                <div key={idx} className="flex items-center justify-center p-6 bg-white border border-gray-100 rounded-lg hover:shadow-lg transition-all">
-                  <img src={client.logo} alt={`Logo ${client.name}`} className="max-h-12 md:max-h-14 w-auto object-contain grayscale hover:grayscale-0 transition-all" />
+                <div key={idx} className="flex items-center justify-center p-6 h-28 bg-white border border-gray-100 rounded-lg hover:shadow-lg transition-all">
+                  <img
+                    src={client.logo}
+                    alt={`Logo ${client.name}`}
+                    className={`${client.big ? 'max-h-24 md:max-h-28' : 'max-h-16 md:max-h-20'} max-w-[85%] w-auto object-contain grayscale hover:grayscale-0 transition-all`}
+                  />
                 </div>
               ))}
             </div>
