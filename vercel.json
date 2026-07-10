@@ -18,8 +18,6 @@
     { "source": "/industrial-innovation-and-design-exhibitions-of-2017/", "destination": "/", "permanent": true }
   ],
   "rewrites": [
-    { "source": "/manutencao-eletrica-industrial-campinas", "destination": "/index.html" },
-    { "source": "/instalacao-eletrica-predial-campinas", "destination": "/index.html" },
-    { "source": "/manutencao-eletrica-comercial-campinas", "destination": "/index.html" }
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
