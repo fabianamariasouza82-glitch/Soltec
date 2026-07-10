@@ -10,8 +10,8 @@ import WhatsAppButton from "./components/WhatsAppButton";
 import ManutencaoEletricaIndustrial from "./pages/ManutencaoEletricaIndustrial";
 import InstalacaoEletricaPredial from "./pages/InstalacaoEletricaPredial";
 import ManutencaoEletricaComercial from "./pages/ManutencaoEletricaComercial";
-
-
+import BlogIndex from "./pages/BlogIndex";
+import BlogPost from "./pages/BlogPost";
 function Router() {
   return (
     <Switch>
@@ -19,18 +19,18 @@ function Router() {
       <Route path={"/manutencao-eletrica-industrial-campinas"} component={ManutencaoEletricaIndustrial} />
       <Route path={"/instalacao-eletrica-predial-campinas"} component={InstalacaoEletricaPredial} />
       <Route path={"/manutencao-eletrica-comercial-campinas"} component={ManutencaoEletricaComercial} />
+      <Route path={"/blog"} component={BlogIndex} />
+      <Route path={"/blog/:slug"} component={BlogPost} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />
     </Switch>
   );
 }
-
 // NOTE: About Theme
 // - First choose a default theme according to your design style (dark or light bg), than change color palette in index.css
 //   to keep consistent foreground/background color across components
 // - If you want to make theme switchable, pass `switchable` ThemeProvider and use `useTheme` hook
-
 function App() {
   return (
     <ErrorBoundary>
@@ -48,5 +48,4 @@ function App() {
     </ErrorBoundary>
   );
 }
-
 export default App;
