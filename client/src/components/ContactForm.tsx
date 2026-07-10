@@ -3,9 +3,9 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
 
-// TODO: sign up for free at https://formspree.io, create a form, and replace
-// YOUR_FORM_ID below with the ID they give you (looks like "mjkbwxyz").
-const FORMSPREE_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
+// Formspree configurado — mensagens do formulário são enviadas para o
+// e-mail cadastrado na conta Formspree da Soltec.
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/mwvdgywv";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
