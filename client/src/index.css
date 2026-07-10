@@ -43,6 +43,11 @@
 }
 
 :root {
+  /* Usada via style={{ fontFamily: 'var(--font-display)' }} nos
+     títulos de seção (H2, H3) por várias páginas. Sem esta definição,
+     a variável ficava vazia e esses títulos caíam de volta para a
+     fonte do corpo do texto em vez de usar Poppins. */
+  --font-display: 'Poppins', sans-serif;
   --primary: var(--color-blue-700);
   --primary-foreground: var(--color-blue-50);
   --sidebar-primary: var(--color-blue-600);
