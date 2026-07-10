@@ -15,7 +15,9 @@
     { "source": "/https-soltecnicas-com-br-servicos-eletricos-para-industrias", "destination": "/manutencao-eletrica-industrial-campinas", "permanent": true },
     { "source": "/https-soltecnicas-com-br-servicos-eletricos-para-industrias/", "destination": "/manutencao-eletrica-industrial-campinas", "permanent": true },
     { "source": "/industrial-innovation-and-design-exhibitions-of-2017", "destination": "/", "permanent": true },
-    { "source": "/industrial-innovation-and-design-exhibitions-of-2017/", "destination": "/", "permanent": true }
+    { "source": "/industrial-innovation-and-design-exhibitions-of-2017/", "destination": "/", "permanent": true },
+    { "source": "/blog-2", "destination": "/blog", "permanent": true },
+    { "source": "/blog-2/", "destination": "/blog", "permanent": true }
   ],
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
