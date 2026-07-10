@@ -25,6 +25,9 @@ export default function Header() {
           <a href="/#contato" className="text-gray-700 hover:text-[#003366] transition-colors font-medium">
             Contato
           </a>
+          <a href="/blog" className="text-gray-700 hover:text-[#003366] transition-colors font-medium">
+            Blog
+          </a>
         </nav>
         <a href="https://wa.me/5519994252525" target="_blank" rel="noopener noreferrer" className="hidden md:inline-flex">
           <Button className="bg-[#ff6600] hover:bg-[#e55a00] text-white font-semibold">
@@ -47,6 +50,7 @@ export default function Header() {
             <a href="/#clientes" onClick={() => setMobileMenuOpen(false)} className="text-left text-gray-700 hover:text-[#003366] font-medium">Clientes</a>
             <a href="/#sobre" onClick={() => setMobileMenuOpen(false)} className="text-left text-gray-700 hover:text-[#003366] font-medium">Sobre</a>
             <a href="/#contato" onClick={() => setMobileMenuOpen(false)} className="text-left text-gray-700 hover:text-[#003366] font-medium">Contato</a>
+            <a href="/blog" onClick={() => setMobileMenuOpen(false)} className="text-left text-gray-700 hover:text-[#003366] font-medium">Blog</a>
             <a href="https://wa.me/5519994252525" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)}>
               <Button className="w-full bg-[#ff6600] hover:bg-[#e55a00] text-white font-semibold">
                 Solicitar Orçamento
