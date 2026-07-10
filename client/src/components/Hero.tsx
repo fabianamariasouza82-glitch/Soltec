@@ -2,23 +2,23 @@ import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 
 const slides = [
-  "/images/industrial-services.jpg",
-  "/images/eletricistas_uniforme_capacete_liso.jpg",
-  "/images/commercial-services.jpg",
-  "/images/eletricistas_uniforme_liso.jpg",
+  { src: "/images/industrial-services.jpg", alt: "Instalação elétrica industrial realizada pela Soltec em Campinas" },
+  { src: "/images/eletricistas_uniforme_capacete_liso.jpg", alt: "Eletricista da Soltec com uniforme e capacete de segurança" },
+  { src: "/images/commercial-services.jpg", alt: "Manutenção elétrica comercial realizada pela equipe Soltec" },
+  { src: "/images/eletricistas_uniforme_liso.jpg", alt: "Equipe de eletricistas da Soltec em Campinas" },
 ];
 
 function SlideImages({ current, className }: { current: number; className?: string }) {
   return (
     <div className={className}>
-      {slides.map((src, idx) => (
+      {slides.map((slide, idx) => (
         <div
-          key={src}
+          key={slide.src}
           className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
             idx === current ? "opacity-100" : "opacity-0"
           }`}
         >
-          <img src={src} alt="" className="w-full h-full object-cover object-top" />
+          <img src={slide.src} alt={slide.alt} className="w-full h-full object-cover object-top" />
         </div>
       ))}
     </div>
@@ -55,6 +55,10 @@ export default function Hero() {
   return (
     <section className="relative overflow-hidden">
       {/* ===== MOBILE LAYOUT: image on top (contained aspect ratio), text below ===== */}
+      {/* Este bloco contém o único <h1> real da página (SEO: Google prioriza
+          a versão mobile para indexação). O bloco desktop, abaixo, repete o
+          mesmo texto visualmente idêntico, mas usando <p> em vez de <h1>,
+          para evitar dois H1 duplicados no código-fonte da página. */}
       <div className="md:hidden bg-[#003366] text-white">
         <div className="relative aspect-[4/3] w-full">
           <SlideImages current={current} className="absolute inset-0" />
@@ -90,9 +94,12 @@ export default function Hero() {
 
         <div className="container relative z-10">
           <div className="max-w-2xl space-y-6">
-            <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
+            {/* <p> em vez de <h1>: evita H1 duplicado (o H1 real está no
+                bloco mobile acima). Visualmente idêntico, pois o tamanho
+                e peso da fonte vêm das classes Tailwind, não da tag. */}
+            <p className="text-5xl lg:text-6xl font-bold leading-tight">
               Segurança Elétrica que Sua Empresa Merece
-            </h1>
+            </p>
             <p className="text-xl text-blue-100 leading-relaxed">
               Instalação e manutenção elétrica profissional para empresas em Campinas e região. Segurança, confiabilidade e excelência em cada projeto.
             </p>
