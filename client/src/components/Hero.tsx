@@ -30,6 +30,8 @@ function SlideImages({ current, className }: { current: number; className?: stri
             className="w-full h-full object-cover object-top"
             loading={idx === 0 ? "eager" : "lazy"}
             fetchPriority={idx === 0 ? "high" : "auto"}
+            width={1920}
+            height={1080}
           />
         </div>
       ))}
