@@ -26,6 +26,12 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta name="theme-color" content="#003366" />
 
+    <!-- Preload da primeira imagem do carrossel do Hero: é o elemento de
+         LCP (Largest Contentful Paint) da página. Sem isso, o navegador
+         só descobre essa imagem depois de baixar e processar o
+         JavaScript React, atrasando o carregamento dela desnecessariamente. -->
+    <link rel="preload" as="image" href="/images/industrial-services.jpg" fetchpriority="high" />
+
     <!-- Fontes Inter (texto) e Poppins (títulos), carregadas de forma
          não-bloqueante: preconnect antecipa a conexão com o Google
          Fonts, e o truque do media="print" + onload evita que o
