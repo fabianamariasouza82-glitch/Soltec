@@ -18,7 +18,19 @@ function SlideImages({ current, className }: { current: number; className?: stri
             idx === current ? "opacity-100" : "opacity-0"
           }`}
         >
-          <img src={slide.src} alt={slide.alt} className="w-full h-full object-cover object-top" />
+          {/* A primeira imagem (idx 0) é a que aparece assim que a página
+              carrega — ela é o elemento de LCP (Largest Contentful Paint)
+              da página. Por isso carrega com prioridade alta e sem lazy
+              loading. As demais só são necessárias quando o carrossel
+              chega nelas, então carregam sob demanda (loading="lazy"),
+              evitando competir por banda com a imagem principal. */}
+          <img
+            src={slide.src}
+            alt={slide.alt}
+            className="w-full h-full object-cover object-top"
+            loading={idx === 0 ? "eager" : "lazy"}
+            fetchPriority={idx === 0 ? "high" : "auto"}
+          />
         </div>
       ))}
     </div>
