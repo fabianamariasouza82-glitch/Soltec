@@ -6,6 +6,7 @@ import ContactForm from "@/components/ContactForm";
 import PageMeta from "../PageMeta";
 import { CheckCircle, ShieldCheck, Zap, PhoneCall } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { trackWhatsAppConversion } from "@/lib/analytics";
 
 const faqs = [
   {
@@ -102,7 +103,12 @@ export default function ManutencaoEletricaIndustrial() {
               Americana, Nova Odessa, Santa Bárbara D'Oeste, Monte Mor, Limeira, Jaguariúna e Indaiatuba.
             </p>
             <div className="flex flex-wrap gap-4">
-              <a href="https://wa.me/5519994252525" target="_blank" rel="noopener noreferrer">
+              
+                href="https://wa.me/5519994252525"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={trackWhatsAppConversion}
+              >
                 <Button className="bg-[#ff6600] hover:bg-[#e55a00] text-white font-semibold px-8 py-3">
                   <PhoneCall size={18} className="mr-2" /> Falar no WhatsApp
                 </Button>
@@ -178,24 +184,4 @@ export default function ManutencaoEletricaIndustrial() {
           </div>
         </section>
 
-        {/* Internal links */}
-        <section className="py-12 bg-white border-t border-gray-100">
-          <div className="container">
-            <p className="text-sm text-gray-500 mb-3">Veja também:</p>
-            <div className="flex flex-wrap gap-4">
-              <Link href="/instalacao-eletrica-predial-campinas" className="text-[#003366] font-medium hover:underline">
-                Instalação Elétrica Predial em Campinas
-              </Link>
-              <Link href="/manutencao-eletrica-comercial-campinas" className="text-[#003366] font-medium hover:underline">
-                Manutenção Elétrica Comercial em Campinas
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        <ContactForm />
-      </main>
-      <Footer />
-    </div>
-  );
-}
+        {/* Internal links
