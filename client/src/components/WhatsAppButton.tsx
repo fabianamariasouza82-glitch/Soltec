@@ -1,12 +1,6 @@
-export default function WhatsAppButton() {
-  const handleClick = () => {
-    if (typeof window.gtag === "function") {
-      window.gtag("event", "conversion", {
-        send_to: "AW-17524430990/o3L9CJnz7JYbEI6xpqRB",
-      });
-    }
-  };
+import { trackWhatsAppConversion } from "@/lib/analytics";
 
+export default function WhatsAppButton() {
   return (
     
       href="https://wa.me/5519994252525"
@@ -14,7 +8,7 @@ export default function WhatsAppButton() {
       rel="noopener noreferrer"
       aria-label="Fale conosco no WhatsApp"
       className="fixed bottom-6 right-6 z-50 flex items-center justify-center"
-      onClick={handleClick}
+      onClick={trackWhatsAppConversion}
     >
       {/* Pulsing ring */}
       <span className="absolute inline-flex h-14 w-14 rounded-full bg-[#25D366] opacity-75 animate-ping" />
