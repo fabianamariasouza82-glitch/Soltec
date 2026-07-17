@@ -1,15 +1,23 @@
 export default function WhatsAppButton() {
+  const handleClick = () => {
+    if (typeof window.gtag === "function") {
+      window.gtag("event", "conversion", {
+        send_to: "AW-17524430990/o3L9CJnz7JYbEI6xpqRB",
+      });
+    }
+  };
+
   return (
-    <a
+    
       href="https://wa.me/5519994252525"
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Fale conosco no WhatsApp"
       className="fixed bottom-6 right-6 z-50 flex items-center justify-center"
+      onClick={handleClick}
     >
       {/* Pulsing ring */}
       <span className="absolute inline-flex h-14 w-14 rounded-full bg-[#25D366] opacity-75 animate-ping" />
-
       {/* Solid button */}
       <span className="relative inline-flex items-center justify-center h-14 w-14 rounded-full bg-[#25D366] shadow-lg hover:bg-[#1ebe57] transition-colors">
         <svg
