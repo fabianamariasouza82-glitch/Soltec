@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 import { Link } from "wouter";
 import PageMeta from "../PageMeta";
+import { trackWhatsAppConversion } from "@/lib/analytics";
 
 export default function HomePage() {
   const [isVisible, setIsVisible] = useState(false);
@@ -152,7 +153,12 @@ export default function HomePage() {
                 <p className="text-gray-600 mb-6 leading-relaxed">
                   Nosso compromisso é oferecer soluções elétricas que garantem a continuidade operacional de seus negócios, com atendimento personalizado e suporte técnico de qualidade.
                 </p>
-                <a href="https://wa.me/5519994252525" target="_blank" rel="noopener noreferrer">
+                
+                  href="https://wa.me/5519994252525"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={trackWhatsAppConversion}
+                >
                   <Button className="bg-[#ff6600] hover:bg-[#e55a00] text-white font-semibold px-8 py-3">
                     Entrar em Contato
                   </Button>
