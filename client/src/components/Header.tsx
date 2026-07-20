@@ -1,8 +1,15 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { trackWhatsAppConversion, buildWhatsAppLink } from "@/lib/analytics";
+
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const whatsappLink = buildWhatsAppLink(
+    "Olá! Vim do site da Soltec e gostaria de solicitar um orçamento."
+  );
+
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
       <div className="container flex items-center justify-between h-20 md:h-24">
@@ -29,7 +36,13 @@ export default function Header() {
             Blog
           </a>
         </nav>
-        <a href="https://wa.me/5519994252525" target="_blank" rel="noopener noreferrer" className="hidden md:inline-flex">
+        
+          href={whatsappLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hidden md:inline-flex"
+          onClick={trackWhatsAppConversion}
+        >
           <Button className="bg-[#ff6600] hover:bg-[#e55a00] text-white font-semibold">
             Solicitar Orçamento
           </Button>
@@ -51,7 +64,15 @@ export default function Header() {
             <a href="/#sobre" onClick={() => setMobileMenuOpen(false)} className="text-left text-gray-700 hover:text-[#003366] font-medium">Sobre</a>
             <a href="/#contato" onClick={() => setMobileMenuOpen(false)} className="text-left text-gray-700 hover:text-[#003366] font-medium">Contato</a>
             <a href="/blog" onClick={() => setMobileMenuOpen(false)} className="text-left text-gray-700 hover:text-[#003366] font-medium">Blog</a>
-            <a href="https://wa.me/5519994252525" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)}>
+            
+              href={whatsappLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => {
+                trackWhatsAppConversion();
+                setMobileMenuOpen(false);
+              }}
+            >
               <Button className="w-full bg-[#ff6600] hover:bg-[#e55a00] text-white font-semibold">
                 Solicitar Orçamento
               </Button>
