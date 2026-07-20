@@ -1,9 +1,9 @@
-import { trackWhatsAppConversion } from "@/lib/analytics";
+import { trackWhatsAppConversion, buildWhatsAppLink } from "@/lib/analytics";
 
 export default function WhatsAppButton() {
   return (
     
-      href="https://wa.me/5519994252525"
+      href={buildWhatsAppLink("Olá! Vim através do site da Soltec e gostaria de mais informações.")}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Fale conosco no WhatsApp"
