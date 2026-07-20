@@ -1,4 +1,4 @@
-import TrustindexWidget from "@/components/TrustindexWidget";
+import ElfsightWidget from "@/components/ElfsightWidget";
 
 export default function GoogleReviews() {
   return (
@@ -12,7 +12,7 @@ export default function GoogleReviews() {
             Avaliações reais de clientes no Google.
           </p>
         </div>
-        <TrustindexWidget />
+        <ElfsightWidget />
       </div>
     </section>
   );
