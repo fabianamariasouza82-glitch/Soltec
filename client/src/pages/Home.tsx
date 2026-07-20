@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 import { Link } from "wouter";
 import PageMeta from "../PageMeta";
-import { trackWhatsAppConversion } from "@/lib/analytics";
+import { trackWhatsAppConversion, buildWhatsAppLink } from "@/lib/analytics";
 
 export default function HomePage() {
   const [isVisible, setIsVisible] = useState(false);
@@ -154,7 +154,7 @@ export default function HomePage() {
                   Nosso compromisso é oferecer soluções elétricas que garantem a continuidade operacional de seus negócios, com atendimento personalizado e suporte técnico de qualidade.
                 </p>
                 
-                  href="https://wa.me/5519994252525"
+                  href={buildWhatsAppLink("Olá! Vim do site da Soltec e gostaria de falar com um especialista.")}
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={trackWhatsAppConversion}
