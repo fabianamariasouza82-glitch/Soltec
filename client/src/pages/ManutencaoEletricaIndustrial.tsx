@@ -6,7 +6,7 @@ import ContactForm from "@/components/ContactForm";
 import PageMeta from "../PageMeta";
 import { CheckCircle, ShieldCheck, Zap, PhoneCall } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { trackWhatsAppConversion } from "@/lib/analytics";
+import { trackWhatsAppConversion, buildWhatsAppLink } from "@/lib/analytics";
 
 const faqs = [
   {
@@ -39,10 +39,6 @@ export default function ManutencaoEletricaIndustrial() {
       })),
     };
 
-    // Schema Service: descreve formalmente o serviço oferecido nesta
-    // página (o quê, quem presta, onde é oferecido). Complementa o
-    // FAQPage — o FAQ ajuda o Google a entender dúvidas comuns, o
-    // Service ajuda a entender "isto é uma oferta de serviço real".
     const serviceSchema = {
       "@context": "https://schema.org",
       "@type": "Service",
@@ -104,7 +100,7 @@ export default function ManutencaoEletricaIndustrial() {
             </p>
             <div className="flex flex-wrap gap-4">
               
-                href="https://wa.me/5519994252525"
+                href={buildWhatsAppLink("Olá! Vim do site da Soltec (página de Manutenção Industrial) e gostaria de solicitar um orçamento.")}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={trackWhatsAppConversion}
@@ -184,4 +180,24 @@ export default function ManutencaoEletricaIndustrial() {
           </div>
         </section>
 
-        {/* Internal links
+        {/* Internal links */}
+        <section className="py-12 bg-white border-t border-gray-100">
+          <div className="container">
+            <p className="text-sm text-gray-500 mb-3">Veja também:</p>
+            <div className="flex flex-wrap gap-4">
+              <Link href="/instalacao-eletrica-predial-campinas" className="text-[#003366] font-medium hover:underline">
+                Instalação Elétrica Predial em Campinas
+              </Link>
+              <Link href="/manutencao-eletrica-comercial-campinas" className="text-[#003366] font-medium hover:underline">
+                Manutenção Elétrica Comercial em Campinas
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        <ContactForm />
+      </main>
+      <Footer />
+    </div>
+  );
+}
