@@ -5,3 +5,8 @@ export function trackWhatsAppConversion() {
     });
   }
 }
+
+export function buildWhatsAppLink(message: string) {
+  const phone = "5519994252525";
+  return `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+}
